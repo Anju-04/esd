@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+
+.searchbar2 {
+  display: none;
+}
+ 
+.logo {
+  font-size: 27px;
+  font-weight: 600;
+  color: rgb(47, 141, 70);
+}
+ 
+.icn {
+  height: 30px;
+}
+.menuicn {
+  cursor: pointer;
+}
+ 
+.searchbar,
+.message,
+.logosec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.searchbar2 {
+  display: none;
+}
+.logosec {
+  gap: 60px;
+}
+ 
+.searchbar input {
+  width: 250px;
+  height: 42px;
+  border-radius: 50px 0 0 50px;
+  background-color: var(--background-color3);
+  padding: 0 20px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+}
+.searchbtn {
+  width: 50px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 50px 50px 0px;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+.message {
+  gap: 40px;
+  position: relative;
+  cursor: pointer;
+}
+.circle {
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  background-color: #fa7bb4;
+  border-radius: 50%;
+  left: 19px;
+  top: 8px;
+}
+.dp {
+  height: 40px;
+  width: 40px;
+  background-color: #626262;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.main-container {
+  display: flex;
+  width: 100vw;
+  position: relative;
+  top: 70px;
+  z-index: 1;
+}
+.dpicn {
+  height: 42px;
+}
+ 
+.main {
+  height: calc(100vh - 70px);
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 40px 30px 30px 30px;
+}
+ 
+.main::-webkit-scrollbar-thumb {
+  background-image:
+        linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
+}
+.main::-webkit-scrollbar {
+  width: 5px;
+}
+.main::-webkit-scrollbar-track {
+  background-color: #9e9e9eb2;
+}
+
+h4{
+  font-size: 30px;
+  font-weight: 600;
+  color: #5500cb;}
+
+p {
+  height: 35px;
+  width: 90px;
+  border-radius: 8px;
+  background-color: #5500cb;
+  color: white;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+
+  </style>
+</head>
+<body>
+<header>
+<h3 style="color:MediumSeaGreen;">Gupta Tutorials</h3>
+
+ <div class="searchbar">
+            <input type="text"
+                   placeholder="Search">
+            <div class="searchbtn">
+              <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+                    class="icn srchicn"
+                    alt="search-icon">
+              </div>
+        </div>
+ 
+
+
+
+
+
+</header>
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span style="color:blue;font-weight:bold; class="icon-bar"></span>
+        <span style="color:blue;font-weight:bold;class="icon-bar"></span>
+         <span style="color:blue;font-weight:bold; class="icon-bar"></span>
+              <span style="color:blue;font-weight:bold;class="icon-bar"></span>
+         <span style="color:blue;font-weight:bold;class="icon-bar"></span>
+     <span style="color:purple;font-weight:bold;class="icon-bar"></span>
+        
+ </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Institution</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log out</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Logo</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Dashboard</a></li>
+        <li><a href="#section2">Articles</a></li>
+        <li><a href="#section3">Reports</a></li>
+        <li><a href="#section4">Institution</a></li>
+       <li><a href="#section5">Profile</a></li>
+      <li><a href="#section6">Settings</a></li>
+       <li><a href="#section7">Log out</a></li>
+        </ul><br>
+
+    </div>
+    <br>
+    
+    
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="well">
+            <h4>60.3k</h4>
+            <p>Artical views</p> 
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="well">
+            <h4>150</h4>
+            <p>Likes</p> 
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="well">
+            <h4>320</h4>
+            <p>Comments</p> 
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="well">
+            <h4>70</h4>
+            <p>Published</p> 
+
+        </div>
+      </div>
+
+         
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="well">
+            <h4>Recent Articles</h4> 
+            </div>
+           </div><br><br><br><br>
+        
+
+
+
+
+
+    
+
+</body>
+<footer>
+<div class="row">
+<div class="col-sm-8">
+<div class="well">
+<h4>ADMIN PANEL</h4>
+</div>
+</div>
+</footer>
+</html>
